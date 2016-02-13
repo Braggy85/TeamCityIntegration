@@ -1,0 +1,195 @@
+swagger: '2.0'
+info:
+  version: 0.0.1
+  title: 'Basic auth service to create a user account'
+paths:
+  /account:
+    get:
+      description: |
+        Retrive an Account object.
+      parameters:
+        - name: Username
+          in: query
+          description: Unique Username - typically email address.
+          required: true
+          type: string
+          
+        - name: Franchise
+          in: query
+          description: The franchise that this account is being created for.
+          required: true
+          type: string
+      responses:
+        '400':
+          description: Unknown Error
+        '405':
+          description: Account does not exist
+        '406':
+          description: Invalid Franchise Specified.
+        '200':
+          description: Successful response
+          schema:
+              title: Account
+              type: object
+              properties:
+                name:
+                  type: string
+                franchise:
+                  type: boolean
+                status: 
+                  type: string
+
+    post:
+      description: |
+        Creates `Account` objects.
+      parameters:
+        - name: Username
+          in: query
+          description: Unique Username - typically email address.
+          required: true
+          type: string
+          
+        - name: Password
+          in: query
+      {
+    "swagger": "2.0",
+    "info": {
+        "version": "0.0.1",
+        "title": "Basic auth service to create a user account"
+    },
+    "paths": {
+        "/account": {
+            "get": {
+                "description": "Retrive an Account object.\n",
+                "parameters": [
+                    {
+                        "name": "Username",
+                        "in": "query",
+                        "description": "Unique Username - typically email address.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Franchise",
+                        "in": "query",
+                        "description": "The franchise that this account is being created for.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "title": "Account",
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "franchise": {
+                                    "type": "boolean"
+                                },
+                                "status": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Unknown Error"
+                    },
+                    "405": {
+                        "description": "Account does not exist"
+                    },
+                    "406": {
+                        "description": "Invalid Franchise Specified."
+                    }
+                }
+            },
+            "post": {
+                "description": "Creates `Account` objects.\n",
+                "parameters": [
+                    {
+                        "name": "Username",
+                        "in": "query",
+                        "description": "Unique Username - typically email address.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Password",
+                        "in": "query",
+                        "description": "The unique password for the user.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Franchise",
+                        "in": "query",
+                        "description": "The franchise that this account is being created for.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "title": "Account",
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "franchise": {
+                                    "type": "boolean"
+                                },
+                                "status": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Account Already Exists"
+                    },
+                    "406": {
+                        "description": "Invalid Password Format"
+                    },
+                    "501": {
+                        "description": "Unknown Error"
+                    }
+                }
+            }
+        }
+    }
+}    description: The unique password for the user.
+          required: true          
+          type: string
+          
+        - name: Franchise
+          in: query
+          description: The franchise that this account is being created for.
+          required: true
+          type: string
+          
+      responses:
+        '501':
+          description: Unknown Error
+        '405':
+          description: Account Already Exists
+        '406':
+          description: Invalid Password Format
+        '200':
+          description: Successful response
+          schema:
+              title: Account
+              type: object
+              properties:
+                name:
+                  type: string
+                franchise:
+                  type: boolean
+                status: 
+                  type: string
