@@ -1,4 +1,4 @@
-<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 <PropertyGroup>
 <SoapUIDir>$(MSBuildProjectDirectory)\Tests</SoapUIDir>
 <SoapTestTool>C:\Program Files (x86)\SmartBear\SoapUI-5.2.1\bin\testrunner.bat</SoapTestTool>
@@ -9,11 +9,10 @@
 <ItemGroup>
   <SoapUIProjectFiles Include="$(SoapUIDir)\*-soapui-project.xml"/>      
   </ItemGroup>
-    <!-- Replace old server urls with new ones -->
-    <FileUpdate Files="@(SoapUIProjectFiles)" Regex="$(someurl)" ReplacementText="$(newurl)" IgnoreCase="true"/>
   </Target>
     
   <Target Name="RunFunctionalSoapUITests" DependsOnTargets="ConfigureSoapUITests">
      <!--Run all the soap ui functional tests-->
     <Exec Command="&quot;$(SoapTestTool)&quot; &quot;%(SoapUIProjectFiles.Identity)&quot; -h &quot;localhost:9010&quot; -I -r -a -j -f &quot;$(SoapUIDir)\Report&quot;" />
    </Target>
+</Project>
