@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="2f60d2bf-a087-491f-9f07-a95b0f6a4896" activeEnvironment="Default" name="Teamcity Integration" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="73d3b664-b302-4af4-b3ae-69ceb802a4ee" wadlVersion="http://wadl.dev.java.net/2009/02" name="Basic auth service to create a user account" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:description xsi:nil="true"/><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:81</con:endpoint></con:endpoints><con:resource name="/account" path="/account" id="2f21b314-3696-4210-9a82-60b87fc8d45b"><con:settings/><con:parameters/><con:method name="GET" id="44df8a47-04b4-46a6-8aab-04f4f4981594" method="GET"><con:description>Retrive an Account object.
+<con:soapui-project id="2f60d2bf-a087-491f-9f07-a95b0f6a4896" activeEnvironment="Default" name="Teamcity Integration" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="basicAuthTestSuite"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="/account TestCase"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="73d3b664-b302-4af4-b3ae-69ceb802a4ee" wadlVersion="http://wadl.dev.java.net/2009/02" name="Basic auth service to create a user account" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:description xsi:nil="true"/><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:81</con:endpoint></con:endpoints><con:resource name="/account" path="/account" id="2f21b314-3696-4210-9a82-60b87fc8d45b"><con:settings/><con:parameters/><con:method name="GET" id="44df8a47-04b4-46a6-8aab-04f4f4981594" method="GET"><con:description>Retrive an Account object.
 
 </con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>Username</con:name><con:style>QUERY</con:style><con:description>Unique Username - typically email address.</con:description></con:parameter><con:parameter required="true"><con:name>Franchise</con:name><con:style>QUERY</con:style><con:description>The franchise that this account is being created for.</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>406</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="ad93850f-b07d-42f3-a08a-1d9bffe38c13" mediaType="application/json"><con:settings/><con:parameters/></con:request></con:method><con:method name="POST" id="013a1c88-6f41-46aa-bd1f-32839a57f622" method="POST"><con:description>Creates `Account` objects.
 
