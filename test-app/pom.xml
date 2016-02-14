@@ -45,6 +45,9 @@
                             <projectProperties>
                                 <value>message=Hello World!</value>
                             </projectProperties>
+							<outputFolder>/output/</outputFolder>
+    <!--Make the jUnit results file-->
+    <junitReport>true</junitReport>
                         </configuration>
                     </execution>
                 </executions>
