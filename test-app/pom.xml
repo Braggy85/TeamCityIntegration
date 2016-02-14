@@ -33,6 +33,7 @@
 					<!--Make the jUnit results file-->
 					<junitReport>true</junitReport>
 					<exportAll>true</exportAll>
+					<testFailIgnore>true</testFailIgnore>
 					<printReport>true</printReport>
 				</configuration>
                 <dependencies>
