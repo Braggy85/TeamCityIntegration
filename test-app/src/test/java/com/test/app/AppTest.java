@@ -34,5 +34,7 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+		
+		assertTrue( (Math.random() < 0.5) );
     }
 }
