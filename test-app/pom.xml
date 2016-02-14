@@ -28,7 +28,7 @@
                 <artifactId>soapui-maven-plugin</artifactId>
                 <version>5.1.2</version>
 				 <configuration>
-					<projectFile>soapui-project.xml</projectFile>
+					<projectFile>/test-app/soapui-project.xml</projectFile>
 					<outputFolder>soapui-reports</outputFolder>
 					<!--Make the jUnit results file-->
 					<junitReport>true</junitReport>
