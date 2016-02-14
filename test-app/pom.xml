@@ -41,7 +41,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>Teamcity-Integration-soapui-project.xml</projectFile>
+                            <projectFile>test-app-soapui-project.xml</projectFile>
                             <projectProperties>
                                 <value>message=Hello World!</value>
                             </projectProperties>
