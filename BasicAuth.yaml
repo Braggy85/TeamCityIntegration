@@ -2,6 +2,7 @@ swagger: '2.0'
 info:
   version: 0.0.1
   title: 'Basic auth service to create a user account'
+host: localhost:8088
 paths:
   /account:
     get:
@@ -26,6 +27,8 @@ paths:
           description: Account does not exist
         '406':
           description: Invalid Franchise Specified.
+        '407':
+          description: Invalid Username Format Specified.
         '200':
           description: Successful response
           schema:
@@ -69,9 +72,9 @@ definitions:
   Account:
     type: object
     properties: 
-      name: 
+      Username: 
         type: string
-      franchise:
+      Franchise:
         type: string
-      status: 
+      Status: 
         type: string

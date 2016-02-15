@@ -4,6 +4,7 @@
         "version": "0.0.1",
         "title": "Basic auth service to create a user account"
     },
+    "host": "localhost:8088",
     "paths": {
         "/account": {
             "get": {
@@ -39,6 +40,9 @@
                     },
                     "406": {
                         "description": "Invalid Franchise Specified."
+                    },
+                    "407": {
+                        "description": "Invalid Username Format Specified."
                     }
                 }
             },
@@ -91,13 +95,13 @@
         "Account": {
             "type": "object",
             "properties": {
-                "name": {
+                "Username": {
                     "type": "string"
                 },
-                "franchise": {
+                "Franchise": {
                     "type": "string"
                 },
-                "status": {
+                "Status": {
                     "type": "string"
                 }
             }
