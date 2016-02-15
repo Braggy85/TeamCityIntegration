@@ -43,6 +43,9 @@
                     },
                     "407": {
                         "description": "Invalid Username Format Specified."
+                    },
+                    "408": {
+                        "description": "Invalid Username fied."
                     }
                 }
             },
