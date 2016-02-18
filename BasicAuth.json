@@ -34,6 +34,9 @@
                     },
                     "410": {
                         "description": "General Failure"
+                    },
+                    "411": {
+                        "description": "Invalid Password Format"
                     }
                 }
             },

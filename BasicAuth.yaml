@@ -23,6 +23,8 @@ paths:
       responses:
         '410' : 
           description: 'General Failure'
+        '411' : 
+          description: 'Invalid Password Format'
         '200':
           description: Successful response
           schema:
@@ -60,6 +62,7 @@ paths:
         '200':
           description: Successful response
           schema: 
+          
             $ref: '#/definitions/Account'
               
 definitions:
