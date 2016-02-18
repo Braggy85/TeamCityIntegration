@@ -21,14 +21,6 @@ paths:
           required: true
           type: string
       responses:
-        '400':
-          description: Unknown Error
-        '405':
-          description: Account does not exist
-        '406':
-          description: Invalid Franchise Specified.
-        '407':
-          description: Invalid Username Format Specified.
         '200':
           description: Successful response
           schema:
