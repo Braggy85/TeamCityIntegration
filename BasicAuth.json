@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "0.0.1",
+        "version": "0.0.2",
         "title": "Basic auth service to create a user account"
     },
     "host": "localhost:8088",
@@ -31,6 +31,9 @@
                         "schema": {
                             "$ref": "#/definitions/Account"
                         }
+                    },
+                    "410": {
+                        "description": "General Failure"
                     }
                 }
             },

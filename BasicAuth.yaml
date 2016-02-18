@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: 0.0.1
+  version: 0.0.2
   title: 'Basic auth service to create a user account'
 host: localhost:8088
 paths:
@@ -21,6 +21,8 @@ paths:
           required: true
           type: string
       responses:
+        '410' : 
+          description: 'General Failure'
         '200':
           description: Successful response
           schema:
